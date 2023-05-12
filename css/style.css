@@ -58,7 +58,7 @@ img {
 
 nav { 
    /* background-color mengatur warna latar belakang */
-   background-color: white;
+   background-color: darkblue;
 
    /* penulisan 2 background-color seperti ini akan mengabaikan penulisan sebelumnya */
    background-color: darkblue;
