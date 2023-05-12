@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <title>Produk</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css">
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <style>
+        section {
+            min-height: 90vh;
+            
+            h5.card-title {
+              min-height: 180px;
+        }
+    </style>
+    <script src="js/jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <!-- Tulis Kode Bootstrap Di Bawah Sini -->
+    
+    <nav class="navbar navbar-dark bg-primary navbar-expand-lg-bisadicopy">
+      
+      <div class="container">
+        <a class="navbar-brand=#">
+          <img src="images/logo/logo_kuy.png" height="30" alt="image">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarnav11"
+                aria-controls="navbarnav11" aria-expanded="false" aria-label="toggle navigator">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarnav11">
+          <ul class="navbar-nav ms-auto">
+            
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html#best-seller">Best Seller</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#our-team">Our Team</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#review">Review</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact-us">Contact</a>
+            </li>
+            
+          </ul>
+          <a class="btn btn-success ms-md-3" target="_blank" href="https://wa.me/62895385767239"><i
+                  class="bi bi-whatsapp"></i> Chat</a>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="produk">
+      <div class="container my-5 py-5 text-center">
+        <h1>Pilih Produk Anda</h1>
+        <p class="fs-4">Kualitas terbaik biji kopi pilihan, Fresh diambil langsung dari pertani</p>
+        <hr class="border border-warning border-3 opacity-75">
+        
+        <div class="form-floating my-5 col-md-4 mx-auto">
+          <select class="form-select" id="select_kopi">
+            <option selected disabled>-</option>
+            <option value="arabica">Arabica</option>
+            <option value="robusta">Robusta</option>
+          </select>
+          <label for="select_kopi">Pilih Jenis Kopi</label>
+        </div>
+        
+        <div id="baris_produk" class="row">
+         </div>
+          
+    </section>
+    
+    <footer class="riki-block footer-small bg-primary py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-8">
+            <ul class="nav justify-content-center justify-content-md-start">
+              <li class="nav-item active">
+                <a class="text-light nav-link" href="index.html#best-seller">Best Seller</a>
+              </li>
+              <li class="nav-item">
+                <a class="text-light nav-link" href="index.html#our-team">Our Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="text-light nav-link" href="index.html#review">Review</a>
+              </li>
+              <li class="nav-item actibe">
+                <a class="text-light nav-link" href="index.html#contact-us">Contact</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="col-12 col-md-4 mt-4 mt-md-0 text-center text-md-right text-light">
+            ©2023 Setia &amp; Riksa . All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+    /* Tulis Javascrip Di bawah Sini */
+        var sumber = "https://rikikurnia.com/prakerja/api/kopi"
+        var sumber2 = "data.json"
+        
+        select_kopi.onchange = function () {
+        var pilihan = select_kopi.value
+        var template = ""
+        
+        $.getJSON(sumber2).then(function (data) {
+        var data_kopi = data[pilihan]
+        data_kopi.forEach(item => {
+          template += `<div class="col-md-4 mb-4">
+                <div class="card">
+                  <img src="${item.foto}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">${item.nama}</h5>
+                    <div style="min-height:40px" class="row my-5">
+                      <div class="col">
+                        <i class="bi bi-basket"></i> ${item.size}
+                     </div>
+                    <div class="col">
+                      ${item.harga}
+                    </div>
+                   </div>
+                    <a href="#" class="btn btn-success w-100"><i class="bi bi-cart"></i> Beli </a>
+                    </div>
+                  </div>
+                </div>`
+                
+        })
+            baris_produk.innerHTML = template
+            console.log(data_kopi)
+          
+        })
+        }
+    </script>
+</body>
+
+</html>

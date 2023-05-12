@@ -1,0 +1,62 @@
+{
+  "arabica": [ 
+    { 
+    "foto": "images/produk/product_capuchino.jpg", 
+    "nama": "Cappuccino Arabica", 
+    "size": "500 Gram", 
+    "harga": "200.000", 
+    "link": "https://www.google.com/search?q=cappuccino+arabica&tbm=shop" 
+    }, 
+    { 
+    "foto": "images/produk/product_espresso.jpg", 
+    "nama": "Pahit Arabica", 
+    "size": "100 Gram", 
+    "harga": "100.000", 
+    "link": "https://www.google.com/search?q=pahit+arabica&tbm=shop" 
+    }, 
+    { 
+    "foto": "images/produk/product_latte.jpg", 
+    "nama": "Latte Arabica", 
+    "size": "150 Gram", 
+    "harga": "150.000", 
+    "link": "https://www.google.com/search?q=latte+arabica&tbm=shop" 
+    },
+    { 
+    "foto": "images/produk/product_latte.jpg", 
+    "nama": "Latte Arabica", 
+    "size": "150 Gram", 
+    "harga": "150.000", 
+    "link": "https://www.google.com/search?q=latte+arabica&tbm=shop" 
+    },
+    { 
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVaEK7nmsUijsm0vufjias8-jgxmB8BiESbw&usqp=CAU", 
+    "nama": "Gayo Arabica", 
+    "size": "180 Gram", 
+    "harga": "250.000", 
+    "link": "https://www.google.com/search?q=latte+arabica&tbm=shop" 
+    },
+    { 
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfFPYLJd-rOE884eYiFPq56E6DtmR6W-DBug&usqp=CAU", 
+    "nama": "Kapal Api Signature", 
+    "size": "120 Gram", 
+    "harga": "100.000", 
+    "link": "https://www.google.com/search?q=latte+arabica&tbm=shop" 
+    }
+],
+  "robusta": [ 
+    { 
+    "foto": "images/produk/product_kopi_susu.jpg", 
+    "nama": "Kopsus Robusta", 
+    "size": "100 Gram", 
+    "harga": "500.000", 
+    "link": "https://www.google.com/search?q=kopi+susu+robusta&tbm=shop" 
+    },
+    { 
+    "foto": "images/produk/product_latte.jpg", 
+    "nama": "Latte Robusta", 
+    "size": "150 Gram", 
+    "harga": "150.000", 
+    "link": "https://www.google.com/search?q=latte+robusta&tbm=shop" 
+    }
+  ]
+}
